@@ -1,0 +1,590 @@
+/* ============================ Import fonts =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* ============================ END ================================= */
+
+
+/* ====================== universal properties ========================== */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* ====================== universal properties ========================== */
+
+
+/* ======================= Navbar styling ========================= */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar.sticky {
+    padding: 15px 0;
+    background: #007CC7;
+}
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: #007CC7;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color .3s ease;
+}
+.navbar .menu li a:hover {
+    color: #007CC7;
+}
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+    text-shadow: 2px 2px rgba(39, 39, 39, 0.7);
+}
+/* Menu Button Styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/* Menu Button ENDS */
+/* ======================= Navbar ENDS ========================= */
+
+
+/* ======================= Home Section Styling ========================= */
+.home {
+    display: flex;
+    background: url("../images/banner5.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width {
+    margin: auto 0 auto 40px; 
+}
+.home .home-content .text-1 {
+    font-size: 27px;
+
+}
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;    
+}
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span {
+    color:#007CC7;
+    font-weight: 500;
+}
+.home .home-content .container {
+    margin: 10px;
+}
+.home .home-content .container .hire-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 36px;
+    width: 180px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: 2px solid #212121;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 100%;
+    background-image: linear-gradient(to left, #4DA8DA, #007CC7, #203647);
+    transition: all 0.3s ease;
+}
+.home .home-content .container .hire-btn:hover {
+    background: none;
+    border: 2px solid #007CC7;
+    color:#007CC7;
+}
+/* ================ Home Section ENDS ================== */
+
+
+/* ================ Common Sections Styling ================ */
+section {
+    padding: 100px 0;
+}
+.about, .services, .samples, .skills, .contact, .footer {
+    font-family: 'Poppins', sans-serif;
+}
+section .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #12232E;
+    transform: translateX(-50%);
+}
+section .title::after {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: #007CC7;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-content,
+.services .services-content,
+.skills .skills-content,
+.samples .samples-content,
+.contact .contact-content {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ================ Common Sections END ================ */
+
+
+/* ================ About Section Styling ================== */
+
+
+.about .title::after {
+    content: "Who I am";
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right {
+    width: 55%;
+}
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+    color: #007CC7;
+}
+.about .about-content .right p {
+    text-align: justify;
+}
+.about .about-content .right button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.1vmax;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 100%;
+    background-image: linear-gradient(to left, #4DA8DA, #007CC7, #203647);
+    transition: all 0.3s ease;
+}
+.about .about-content .right button:hover {
+    background: none;
+    border: 2px solid #007CC7;
+    color:#007CC7;
+}
+/* ================ About Section ENDS ================== */
+
+
+/* ========== Services Section starting ============ */
+.services {
+    background: #12232E;
+    color: #fff;
+}
+.services .title::before {
+    background: #fff;
+} 
+.services .title::after {
+    content: "What I provide";
+    background: #12232E;
+}
+.services .services-content .card {
+    width: calc(33% - 20px);
+    background: #203647;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover {
+    background: #007CC7;
+}
+.services .services-content .card .box {
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover .box {
+    transform: scale(1.05);
+}
+.services .services-content .card i {
+    font-size: 50px;
+    color: #007CC7;
+    transition: color 0.3s ease;
+}
+.services .services-content .card:hover i {
+    color: #fff;
+}
+.services .services-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* ========== Services Section ENDS ============ */
+
+
+/* ========== Skills Section Styling ============ */
+
+.skills .title::after {
+    content: "What I know";
+}
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p {
+    text-align: justify;
+    margin-bottom: 8px;
+}
+.skills .skills-content .left a {
+    background-image: linear-gradient(to left,#979494 0%, #eceaea  51%,#dad6d6  100%);
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #000;     
+    box-shadow: 0 0 20px #eee;
+    border-radius: 6px;
+}
+.skills .skills-content .left a:hover {
+    background-position: right center;
+    text-decoration: none;
+}
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.skills .skills-content .right .span {
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 0;
+    top: 0;
+    background: #007CC7;
+}
+.skills .skills-content .right .line.css::before {
+    width: 60%;
+}
+.skills .skills-content .right .line.js::before {
+    width: 75%;
+}
+.skills .skills-content .right .line.ps::before {
+    width: 85%;
+}
+.skills .skills-content .right .line.ai::before {
+    width: 80%;
+}
+
+/* ========== Skills Section ENDS ============ */
+
+
+/* ========== Samples Section Styling ============ */
+
+
+.samples {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #12232E;
+}
+.samples .title::before {
+    background: #fff;
+} 
+.samples .title::after {
+    content: "Have a glimpse";
+    background: #12232E;
+}
+.samples .img-slider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+    background: #12232E;
+}
+.samples .img-slider .slide {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    clip-path: circle(0% at 0 50%);
+}
+.samples .img-slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+.samples .img-slider .slide img {
+    width: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+.samples .img-slider .slide .info {
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+.samples .img-slider .slide .info h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.samples .img-slider .navigation {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.samples .img-slider .navigation .btn {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.samples .img-slider .navigation .btn.active {
+    background: #2696e9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+ /* ========== Samples Section ENDS ============ */
+
+
+/* =================== Contact Section Styling ==================== */
+
+.contact .title::after {
+    content: "Get in touch";
+}
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
+}
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+.contact .contact-content .row {
+    display:flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: #007CC7;
+}
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+    color: #333;
+}
+.contact .right form .fields {
+    display: flex;
+}
+.contact .right form .fields .field,
+.contact .right form .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline:none;
+    padding: 0 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.contact .right form .field input:hover,
+.contact .right form .textarea textarea:hover {
+    border: 1px solid #007bc769;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border: 1px solid #007bc7af;
+}
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #fff;
+    background-size: 120%;
+    background-image: linear-gradient(to left, #4DA8DA, #007CC7, #203647);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+    border: 2px solid #007CC7;
+    color: #007CC7;
+    background: none;
+}
+
+/* =================== Contact Section ENDS ==================== */
+
+
+/* =================== Footer Section Styling ==================== */
+
+footer.footer-section{
+    background: #12232E;
+    padding: 2rem 0;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+footer.footer-section .social {
+    text-align: center;
+}
+footer span a {
+    color: #007CC7;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+footer.footer-section .copyrights {
+    text-align: center;
+}
+footer .social a > i {
+    font-size: 22px;
+    padding: 1rem;
+    color: #d8cfcf79;
+}
+footer .social a:hover > i {
+    color: #007CC7;
+}
+
+
+/* =================== Footer Section ENDS ==================== */
+
+
+
+
+
+
+
