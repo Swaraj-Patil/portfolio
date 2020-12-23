@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Personal Portfolio | Swaraj Patil</title>
+    <link rel="icon" type="image/png" href="images/icon1.svg">
+
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/jQuery.min.js"></script>
@@ -35,6 +38,7 @@
 
 
     <!-- ================================== START Home Section ================================== -->
+    
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
@@ -46,6 +50,11 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="parallax">
+        <img src="images/parallax/Mobile.min.png" data-speed="15" class="layer para-mob">
+        <img src="images/parallax/Keyboard.min.png" data-speed="6" class="layer para-key">
+        <img src="images/parallax/Monitor.min.png" data-speed="2" class="layer para-screen">
     </section>
     <!-- ================================== END Home Section ================================== -->
 
@@ -117,36 +126,46 @@
                            <span>HTML</span>
                            <span>90%</span>
                         </div>
-                        <div class="line html"></div>
+                        <div id="outerDiv">
+                            <div class="html innerDiv"></div>
+                        </div>
                    </div>
                    <div class="bars">
-                    <div class="info">
-                        <span>CSS</span>
-                        <span>60%</span>
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>60%</span>
+                        </div>
+                        <div id="outerDiv">
+                            <div class="css innerDiv"></div>
+                        </div>
                     </div>
-                    <div class="line css"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>JavaScript</span>
-                        <span>75%</span>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div id="outerDiv">
+                            <div class="js innerDiv"></div>
+                        </div>
                     </div>
-                    <div class="line js"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Photoshop</span>
-                        <span>85%</span>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Photoshop</span>
+                            <span>85%</span>
+                        </div>
+                        <div id="outerDiv">
+                            <div class="ps innerDiv"></div>
+                        </div>
                     </div>
-                    <div class="line ps"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Illustrator</span>
-                        <span>80%</span>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Illustrator</span>
+                            <span>80%</span>
+                        </div>
+                        <div id="outerDiv">
+                            <div class="ai innerDiv"></div>
+                        </div>
                     </div>
-                    <div class="line ai"></div>
-                </div>
                </div>
             </div>
         </div>

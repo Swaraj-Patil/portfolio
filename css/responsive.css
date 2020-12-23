@@ -105,6 +105,11 @@
         height: 310px;
     }
 }
+@media only screen and (max-width:749px) {
+    #parallax {
+      display: none;
+    }
+  }
 
 @media (max-width: 700px){
     .max-width {
@@ -243,5 +248,8 @@
         width: 7px;
         height: 7px;
         margin: 5px;
+    }
+    section.samples .title::after {
+        width: 140px;
     }
 }

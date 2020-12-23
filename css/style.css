@@ -99,20 +99,27 @@ html {
 }
 .home .home-content .text-1 {
     font-size: 27px;
-
+    position: relative;
+    z-index: 10;
 }
 .home .home-content .text-2 {
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px;    
+    margin-left: -3px;
+    position: relative;
+    z-index: 10;
 }
 .home .home-content .text-3 {
     font-size: 40px;
     margin: 5px 0;
+    position: relative;
+    z-index: 10;
 }
 .home .home-content .text-3 span {
     color:#007CC7;
     font-weight: 500;
+    position: relative;
+    z-index: 10;
 }
 .home .home-content .container {
     margin: 10px;
@@ -133,12 +140,47 @@ html {
     background-size: 100%;
     background-image: linear-gradient(to left, #4DA8DA, #007CC7, #203647);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 .home .home-content .container .hire-btn:hover {
     background: none;
     border: 2px solid #007CC7;
     color:#007CC7;
 }
+
+/* Parallax Effect STARTS */
+
+#parallax {
+    position: relative;
+    top: -100vh;
+    margin-bottom: -100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: url(../images/parallax/Monitor.min.png) 800px 50px no-repeat, url(../images/parallax/Mobile.min.png) 500px 100px no-repeat, url(../images/parallax/Keyboard.min.png) 680px 150px no-repeat;*/
+    pointer-events: none;
+    z-index: 1;
+}
+#parallax .para-screen {
+    position: absolute;
+    right: 1%;
+    top: 8%;
+}
+#parallax .para-key {
+    position: absolute;
+    right: 9%;
+    top: 22%;
+}
+#parallax .para-mob {
+    position: absolute;
+    right: 25%;
+    top: 10%;
+}
+
+/* Parallax Effect ENDS */
+
 /* ================ Home Section ENDS ================== */
 
 
@@ -337,32 +379,20 @@ section .title::after {
     font-weight: 500;
     font-size: 18px;
 }
-.skills .skills-content .right .line {
+.skills .skills-content .right #outerDiv {
     height: 5px;
     width: 100%;
     background: lightgray;
     position: relative;
 }
-.skills .skills-content .right .line::before {
-    content: "";
+.skills .skills-content .right .innerDiv {
     position: absolute;
     height: 100%;
-    width: 90%;
+    width: 0%;
     left: 0;
     top: 0;
     background: #007CC7;
-}
-.skills .skills-content .right .line.css::before {
-    width: 60%;
-}
-.skills .skills-content .right .line.js::before {
-    width: 75%;
-}
-.skills .skills-content .right .line.ps::before {
-    width: 85%;
-}
-.skills .skills-content .right .line.ai::before {
-    width: 80%;
+    transition: all 3s ease;
 }
 
 /* ========== Skills Section ENDS ============ */
