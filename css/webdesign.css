@@ -1,0 +1,541 @@
+
+/* =========================== Universal Properties ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+/* ==== ENDS ==== */
+
+/* ============================ Carousel Section Styling =========================== 
+
+.carousel .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rebeccapurple;
+    z-index: -1;
+}
+.carousel .backgroud img {
+    width: 100%;
+    height: 100%;
+}
+.carousel .side-indicator {
+    height: 70%;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carousel .side-indicator .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #afbad3;
+    opacity: 0.7;
+}
+.carousel .side-indicator .index {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #afbad3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.7s ease, width .7s ease;
+}
+.carousel .side-indicator .index p {
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    z-index: 9;
+}
+.carousel .side-indicator .index.active {
+    height: 30px;
+    width: 30px;
+}
+.carousel .side-indicator .index.active p {
+    opacity: 1;
+    font-size: 16px;
+}
+.carousel .content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .content .text-wrapper {
+    width: 60%;
+}
+.carousel .content .text-wrapper .text {
+    padding-left: 300px;
+    padding-right: 100px;
+}
+#title {
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.carousel .content .text-wrapper .text h4 {
+    font-family: 'Oswald';
+    font-size: 120px;
+    color: #fff;
+    position: relative;
+}
+#description {
+    overflow: hidden;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#description p {
+    color: #fff;
+    font-size: 12px;
+    max-height: 55px;
+    position: relative;
+    opacity: 0.8;
+}
+.carousel .content .text-wrapper .text .btn {
+    width: 150px;
+    margin-top: 60px;
+    padding: 10px 10px;
+    display: flex;
+    background: #25609f;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.carousel .content .text-wrapper .text .btn p {
+    color: #fff;
+    font-size: 18px;
+}
+.carousel .content .text-wrapper .text .btn i {
+    color: #fff;
+}
+.carousel .glide {
+    width: 40%;
+}
+.carousel .glide__cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+    cursor: default;
+}
+.carousel .slide {
+    height: 500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+.carousel .slider-image {
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s;
+}
+.carousel .glide__slide--active .slider-image {
+    height: 400px;
+}
+.carousel .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .slide p {
+    color: #fff;
+    font-size: 14px;
+}
+.carousel .rating {
+    display: flex;
+    width: 60px;
+    padding: 8px 0;
+    justify-content: space-between;
+}
+.carousel .circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: .5;
+}
+.carousel .circle.active {
+    opacity: 1;
+}
+.carousel .bookmark {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+.carousel .controls {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+.carousel .controls div {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    transition: all .5s;
+}
+.carousel .controls div:active {
+    transform: scale(0.6);
+}
+.carousel .controls i {
+    color: grey;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1600px){
+    .carousel .slide-indicator {
+        width: 200px;
+    }
+    .carousel .content .text-wrapper {
+        width: 50%;
+    }
+    .carousel .glide {
+        width: 50%;
+    }
+    .carousel .content .text-wrapper .text {
+        padding-left: 200px;
+    }
+    .carousel .content .text-wrapper .text h4 {
+        transform: scale(0.8);
+        transform-origin: left;
+    }
+    .carousel .content .text-wrapper .text .btn {
+        width: 120px;
+    }
+    .carousel .content .text-wrapper .text .btn p {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .carousel .content .text-wrapper .text h4 {
+        transform: scale(0.6);
+        transform-origin: left;
+    }
+    .carousel .slide {
+        height: 400px;
+        width: 220px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .carousel .slide-indicator {
+        width: 120px;
+    }
+    .carousel .content .text-wrapper .text {
+        padding-left: 120px;
+    }
+    .carousel .content {
+        flex-direction: column;
+    }
+    .carousel .content .text-wrapper {
+        width: 100%;
+    }
+    .carousel .glide {
+        width: 100%;
+        padding-left: 120px;
+        padding-top: 40px;
+    }
+    .carousel .content .text-wrapper .text .btn {
+        margin-top: 30px;
+    }
+    .carousel .slide {
+        height: 300px;
+        width: 200px;
+    }
+    .carousel .slider-image {
+        height: 220px;
+    }
+    .carousel .slide p {
+        font-size: 12px;
+    }
+}
+
+
+ ============================ Carousel Section ENDS =========================== */
+
+
+/* ============================ Pricing Section Styling =========================== */
+.temporary {
+    width: 100%;
+    height: 40vh;
+    background: #aaa;
+}
+.pricing {
+    background: #12232E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.pricing-width {
+    width: 100vw;
+    padding: 0px;
+}
+.pricing .title {
+    color: #fff;
+}
+.pricing .title::before {
+    background: #fff;
+} 
+.pricing .title::after {
+    content: "Buy on Fiverr";
+    background: #12232E;
+}
+.wrapper {
+    max-width: 1090px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper .table {
+    position: relative;
+    background: #fff;
+    width: calc(33% - 20px);
+    padding: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1020px){
+    .wrapper .table {
+        width: calc(50% - 20px);
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 698px){
+    .wrapper .table {
+        width: 100%;
+    }
+}
+.table .price-section {
+    display: flex;
+    justify-content: center;
+}
+.price-section .price-area {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+.price-area .inner-area {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    color: #fff;
+    line-height: 117px;
+    text-align: center;
+    position: relative;
+}
+.price-area .inner-area .text {
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 17px;
+}
+.price-area .inner-area .price {
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+.table .package-name {
+    width: 100%;
+    height: 2px;
+    margin: 35px 0;
+    position: relative;
+    background: #f00;
+}
+.table .package-name::before {
+    position: absolute;
+    content: "Silver";
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+}
+.table .features li {
+    margin-bottom: 20px;
+    display: flex;
+    list-style: none;
+    justify-content:space-between;
+}
+.features li .list-name {
+    font-size: 17px;
+    font-weight: 400px;
+}
+.features li .icon {
+    font-size: 15px;
+}
+.features li .icon.check {
+    color: #2db94d;
+}
+.features li .icon.cross {
+    color: #cd3241;
+}
+.table .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.table .btn button {
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.silver ::selection,
+.silver .price-area,
+.silver .inner-area {
+    background: #ffd861;
+}
+.silver .btn button {
+    background-image: linear-gradient(to left, #f8de8f, #ffd861, #fcbd02);
+    color: #fff;
+    border: 2px solid #fff;
+}
+.silver .btn button:hover {
+    background: #fff;
+    border: 2px solid #fcbd02;
+    color: #fcbd02;
+}
+.gold ::selection,
+.gold .price-area,
+.gold .inner-area,
+.gold .btn button {
+    background: #a26bfa;
+}
+.gold .btn button {
+    background-image: linear-gradient(to left, #caaef8, #a26bfa, #7629f3);
+    color: #fff;
+}
+.gold .btn button:hover {
+    background: #fff;
+    color: #7629f3;
+    border: 2px solid #7629f3;
+}
+.platinum ::selection,
+.platinum .price-area,
+.platinum .inner-area {
+    background: #43ef8b;
+}
+.platinum .btn button {
+    background-image: linear-gradient(to left, #89f7b7, #43ef8b, #1cf375);
+    color: #fff;
+}
+.platinum .btn button:hover {
+    background: #fff;
+    color: #1cf375;
+    border: 2px solid #1cf375;
+}
+.silver .package-name {
+    background: #ffecb3;
+}
+.gold .package-name {
+    background: #d0b3ff;
+}
+.platinum .package-name {
+    background: #baf8d4;
+}
+.silver .package-name::before {
+    content: "SILVER";
+}
+.gold .package-name::before {
+    content: "GOLD";
+}
+.platinum .package-name::before {
+    content: "PLATINUM";
+}
+.table .ribbon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    overflow: hidden;
+}
+.table .ribbon::before,
+.table .ribbon::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 5px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    
+}
+.table .ribbon::before {
+    top: 0px;
+    right: 17px;
+}
+.table .ribbon::after {
+    bottom: 17.5px;
+    left: 0px;;
+}
+.table .ribbon span {
+    position: absolute;
+    background: #a26bfa;
+    width: 200px;
+    padding: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    top: 30px;
+    right: 0px;
+    transform: rotate(-45deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================ Pricing Section ENDS =========================== */

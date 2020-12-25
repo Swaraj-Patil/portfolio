@@ -88,7 +88,7 @@ html {
 /* ======================= Home Section Styling ========================= */
 .home {
     display: flex;
-    background: url("../images/banner5.jpg") no-repeat center;
+    background: url("../images/banner5.jpg") no-repeat center fixed;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -159,7 +159,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background: url(../images/parallax/Monitor.min.png) 800px 50px no-repeat, url(../images/parallax/Mobile.min.png) 500px 100px no-repeat, url(../images/parallax/Keyboard.min.png) 680px 150px no-repeat;*/
     pointer-events: none;
     z-index: 1;
 }
@@ -459,10 +458,11 @@ section .title::after {
     z-index: 2;
 }
 .samples .img-slider .navigation .btn {
-    background: rgba(255, 255, 255, 0.5);
+    background: none;
     width: 12px;
     height: 12px;
     margin: 10px;
+    border: 2px solid #2696e9;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -605,8 +605,17 @@ footer .social a > i {
     padding: 1rem;
     color: #d8cfcf79;
 }
-footer .social a:hover > i {
-    color: #007CC7;
+footer .social a:hover > i.fa-linkedin {
+    color: #0e76a8;
+}
+footer .social a:hover > i.fa-instagram {
+    color: #8a3ab9;
+}
+footer .social a:hover > i.fa-twitter {
+    color: #1DA1F2;
+}
+footer .social a:hover > i.fa-github {
+    color: #fff;
 }
 
 
