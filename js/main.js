@@ -45,11 +45,13 @@ $(document).ready(function(){
     });
     // ================================== All non <a> elements made clickable here =====================================
     $('.service-web').click(function(){
-        window.location = $(".box").data("location");
+        window.location = $(".service-web").data("location");
     });
-    $('.pricing .wrapper .table .pkg-btn').click(function(){
-        window.location = $(".pricing .wrapper .table .pkg-btn").data("location");
+    $('.service-art').click(function(){
+        window.location = $(".service-art").data("location");
     });
+
+    
     
 
 });
